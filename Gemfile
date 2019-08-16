@@ -63,3 +63,5 @@ gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
 
 gem "faker", "~> 2.1"
+
+gem "font-awesome-rails", "~> 4.7"

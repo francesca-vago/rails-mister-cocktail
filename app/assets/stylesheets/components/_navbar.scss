@@ -1,6 +1,11 @@
 .navbar-lewagon {
+  display: flex;
   justify-content: space-between;
   background: white;
+
+  i {
+    color: $amaranth-pink;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,3 +15,4 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
