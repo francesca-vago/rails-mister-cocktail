@@ -4,6 +4,13 @@ a {
   color: #fff;
 }
 
+.main-header {
+  font-family: $main-header-font;
+  text-align: center;
+  padding: 20px;
+  font-size: 4rem;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

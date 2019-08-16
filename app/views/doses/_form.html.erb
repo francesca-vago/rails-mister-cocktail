@@ -1,0 +1,9 @@
+<div class="row justify-content-center">
+  <div class="dose-form col-lg-6 text-center">
+    <%= simple_form_for [@cocktail, @dose]  do |f| %>
+      <%= f.input :measurement %>
+      <%= f.association :ingredient %>
+      <%= f.submit "Create a Dose", class: "btn btn-pink" %>
+    <% end %>
+  </div>
+</div>

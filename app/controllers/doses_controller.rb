@@ -1,5 +1,5 @@
 class DosesController < ApplicationController
-  before_action :set_dose, only: [:new, :create, :destroy]
+  before_action :set_dose, only: [:new, :create, :edit, :update, :destroy]
 
   def new
     @dose = Dose.new
@@ -11,8 +11,18 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
-      render :new
+      redirect_to cocktail_path(@cocktail)
     end
+  end
+
+  def edit
+    @dose = Dose.find(params[:id])
+  end
+
+  def update
+    @dose = Dose.find(params[:id])
+    @dose.update(dose_params)
+    redirect_to cocktail_path(@cocktail)
   end
 
   def destroy
@@ -25,7 +35,7 @@ class DosesController < ApplicationController
   private
 
   def dose_params
-    params.require(:dose).permit(:description, :ingredient_id)
+    params.require(:dose).permit(:measurement, :ingredient_id)
   end
 
   def set_dose

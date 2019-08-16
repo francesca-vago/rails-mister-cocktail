@@ -1,3 +1,11 @@
 .btn-pink {
+  background-color: $amaranth-pink;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-pink :hover {
+  text-decoration: none;
+  opacity: 0.8;
   color: #fff;
 }

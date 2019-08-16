@@ -11,3 +11,8 @@ ingredients.each do |ingredient|
     name: ingredient["strIngredient1"]
     )
 end
+
+whiskey_smash = Cocktail.create(name: "Whiskey Smash", image_url: "https://images.unsplash.com/photo-1560508179-1a308735759c?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
+pink_bellini = Cocktail.create(name: "Pink Bellini", image_url: "https://images.unsplash.com/photo-1516685387825-bf3a3dbfbbd4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80")
+margarita = Cocktail.create(name: "Margarita", image_url: "https://images.unsplash.com/photo-1516684163977-84cc7de8c7c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80")
+

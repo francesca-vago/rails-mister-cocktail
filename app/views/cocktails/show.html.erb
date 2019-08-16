@@ -1,16 +1,30 @@
-<h1><%= @cocktail.name %></h1>
+<h1 class="main-header"><%= @cocktail.name %></h1>
 
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <li>
-      <div>
-        <p><%= dose.description %></p>
-        <p><%= dose.ingredient.name %></p>
-      </div>
-    </li>
-  <% end %>
-</ul>
-
-<div class="btn btn-warning">
-  <%= link_to "Back to List", root_path %>
+<div class="d-flex justify-content-center">
+  <img src="<%= @cocktail.image_url %>" alt="Cocktail Image" class="cocktail-image">
 </div>
+
+<div class="row d-flex justify-content-between">
+  <div class="description col-lg-4">
+    <h2>Description</h2>
+    <p><%= @cocktail.description %></p>
+    <div class="btn btn-pink"><%= link_to "Edit Your Cocktail", edit_cocktail_path(@cocktail) %></div>
+  </div>
+
+  <div class="ingredients col-lg-4">
+    <h2>Ingredients</h2>
+    <ul>
+      <% @cocktail.doses.each do |dose| %>
+        <li>
+          <div>
+            <p><%= dose.ingredient.name %> | <%= dose.measurement %></p>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+    <div class="btn btn-pink"><%= link_to "Add a New Dose", new_cocktail_dose_path(@cocktail) %></div>
+    <div class="btn btn-pink"><%= link_to "Edit a Dose", edit_cocktail_dose_path(@cocktail) %></div>
+  </div>
+</div>
+
+
